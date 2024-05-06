@@ -65,7 +65,7 @@ const Createpost = () => {
                   <CiLocationOn size={"20px"} color="#1098F0" />
                 </div>
               </div>
-              <button className="bg-[#1098F0] text-lg text-white px-4 py-1 border-none rounded-full">
+              <button className="my-2 px-4 py-2 border-none text-md bg-[#1098F0] text-white font-semibold rounded-full hover:bg-[#106df0e3]">
                 Post
               </button>
             </div>
