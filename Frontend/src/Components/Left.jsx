@@ -9,6 +9,8 @@ import { PiBookmarkSimpleBold } from "react-icons/pi";
 import { IoPeopleOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { CiCircleMore } from "react-icons/ci";
+import { IoMdLogOut } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Left = () => {
   return (
@@ -21,12 +23,12 @@ const Left = () => {
 
         {/* icons */}
         <div className="my-4">
-          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-200 rounded-full cursor-pointer">
+          <Link to="/" className="flex items-center my-2 px-4 py-2 hover:bg-gray-200 rounded-full cursor-pointer">
             <div>
               <GoHomeFill size={'24px'}/>
             </div>
             <h1 className="text-xl font-semibold ml-2">Home</h1>
-          </div>
+          </Link>
 
           <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-200 rounded-full cursor-pointer">
             <div>
@@ -77,12 +79,12 @@ const Left = () => {
             <h1 className="text-xl font-semibold ml-2">Premium</h1>
           </div>
 
-          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-200 rounded-full cursor-pointer">
+          <Link to="/profile" className="flex items-center my-2 px-4 py-2 hover:bg-gray-200 rounded-full cursor-pointer">
             <div>
               <CgProfile size={'24px'}/>
             </div>
             <h1 className="text-xl font-semibold ml-2">Profile</h1>
-          </div>
+          </Link>
 
           <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-200 rounded-full cursor-pointer">
             <div>
@@ -91,6 +93,12 @@ const Left = () => {
             <h1 className="text-xl font-semibold ml-2">More</h1>
           </div>
 
+          <div className="flex items-center my-2 px-4 py-2 hover:bg-gray-200 rounded-full cursor-pointer">
+            <div>
+              <IoMdLogOut size={'24px'}/>
+            </div>
+            <h1 className="text-xl font-semibold ml-2">Logout</h1>
+          </div>
           <button className="my-2 px-4 py-2 border-none text-md bg-[#1098F0] text-white font-semibold rounded-full w-full hover:bg-[#106df0e3]">Post</button>
         </div>
       </div>
