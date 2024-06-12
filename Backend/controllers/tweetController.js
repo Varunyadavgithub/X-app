@@ -25,24 +25,24 @@ export const createTweet = async (req, res) => {
   }
 };
 /*--------------------Update Tweet---------------------*/
-// export const updateTweeet = async (req, res) => {
-//   try {
-//     const id = req.params.id;
-//     const tweet = await Tweet.findByIdAndUpdate(id, req.body);
-//     if (!tweet) {
-//       return res.status(404).json({
-//         message: "Tweet not found",
-//         success: false,
-//       });
-//     }
-//     const updatedTweet = await Tweet.findById(id);
-//     return res.status(200).json({
-//       updatedProduct,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+export const updateTweeet = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const tweet = await Tweet.findByIdAndUpdate(id, req.body);
+    if (!tweet) {
+      return res.status(404).json({
+        message: "Tweet not found",
+        success: false,
+      });
+    }
+    const updatedTweet = await Tweet.findById(id);
+    return res.status(200).json({
+      updatedTweet,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 /*--------------------Delete Tweet---------------------*/
 export const deleteTweet = async (req, res) => {
   try {
