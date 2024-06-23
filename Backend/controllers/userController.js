@@ -78,10 +78,11 @@ export const Login = async (req, res) => {
 
     return res
       .status(200)
-      .cookie("token", token, { expiresIn: "1d" })
+      .cookie("token", token, { expiresIn: "1d", httpOnly:true })
       .json({
         message: `Welcome back ${user.name}`,
-        success: true,
+        user,
+        success: true
       });
   } catch (error) {
     console.log("Error while Login to the user", error);
@@ -91,18 +92,11 @@ export const Login = async (req, res) => {
   }
 };
 /*--------------------LogOut---------------------*/
-export const Logout = async (req, res) => {
-  try {
+export const Logout = (req, res) => {
     return res.cookie("token", "", { expiresIn: new Date(Date.now()) }).json({
       message: "User Logged out successfully",
-      success: true,
+      success: true
     });
-  } catch (error) {
-    console.log("Error while Logout the user", error);
-    res.status(500).json({
-      message: "Some error happen while Logout the user",
-    });
-  }
 };
 /*--------------------Bookmark---------------------*/
 export const Bookmark = async (req, res) => {

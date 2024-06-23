@@ -39,38 +39,8 @@ const Right = () => {
                 <Avatar githubHandle="sitebase" size="40" round={true} />
               </div>
               <div className="ml-2">
-                <h1 className="font-bold">Alex Xu</h1>
-                <p className="text-sm">@Alexxu</p>
-              </div>
-            </div>
-            <button className="px-4 py-1 bg-black text-white rounded-full">
-              Follow
-            </button>
-          </div>
-
-          <div className="flex items-center justify-between my-4">
-            <div className="flex">
-              <div>
-                <Avatar githubHandle="zuvang" size="40" round={true} />
-              </div>
-              <div className="ml-2">
-                <h1 className="font-bold">Zuvang</h1>
-                <p className="text-sm">@Zuvang</p>
-              </div> 
-            </div>
-            <button className="px-4 py-1 bg-black text-white rounded-full">
-              Follow
-            </button>
-          </div>
-
-          <div className="flex items-center justify-between my-4">
-            <div className="flex">
-              <div>
-                <Avatar githubHandle="alex" size="40" round={true} />
-              </div>
-              <div className="ml-2">
-                <h1 className="font-bold">Alex</h1>
-                <p className="text-sm">@Alex</p>
+                <h1 className="font-bold">Alox</h1>
+                <p className="text-sm">alox01</p>
               </div>
             </div>
             <button className="px-4 py-1 bg-black text-white rounded-full">

@@ -3,9 +3,14 @@ import Avatar from "react-avatar";
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import banner from "../assets/banner.jpg";
-import profile from "../assets/Profile.jpeg";
+import dp from "../assets/Profile.jpeg";
+import useGetProfile from "../hooks/useGetProfile";
+import {useSelector} from "react-redux";
 
 const Profile = () => {
+  const {user} = useSelector(store=>store.user);
+  useGetProfile(user?._id);
+
   return (
     <>
       <div className="w-[50%] border-l border-r border-gray-400">
@@ -24,7 +29,7 @@ const Profile = () => {
           </div>
           <img src={banner} alt="banner" />
           <div className="absolute top-48 ml-2 border-4 border-white rounded-full">
-            <Avatar src={profile} size="120" round={true} />
+            <Avatar src={dp} size="120" round={true} />
           </div>
           <div className="text-right m-2">
             <button className="px-4 py-1 hover:bg-gray-200 rounded-full border border-gray-800">
@@ -33,7 +38,7 @@ const Profile = () => {
           </div>
           <div className="ml-4">
             <h1 className="text-lg font-bold">Varun Yadav</h1>
-            <p className="text-sm">@varun_yadav01</p>
+            <p className="text-sm">@varun01</p>
           </div>
           <div className="m-4">
             <p>
